@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
-  
+
   <title>Frontend Mentor | Tic Tac Toe</title>
 </head>
 <body>
 
   <!-- New game menu start -->
-
-  Pick player 1's mark
-  Remember: X goes first
-
-  New Game (vs CPU)
-  New Game (vs player)
+   <div class="container">
+      <div class="logo">
+        <img src="./assets/logo.svg" alt="logo" class="logo">
+      </div>
+      
+      <div class="box">
+         <div class="switch-container">
+            <h3>PICK PLAYER 1'S MARK</h3>
+            <div class="switch">
+                <button type="radio" name="mark" id="x" value="X" class="mark-button" checked><p for="x" class="p-x">X</p></button> 
+                
+                <button type="radio" name="mark" id="o" class="mark-button" value="O"><p for="o" class="p-o">O</p></button>
+               
+            </div>
+            <p class="remember">REMEMBER: X GOES FIRST</p>
+        </div>
+      </div>
+      
+    </div>
+    <div class="new-game">
+        <button class="vs-cpu">New Game (vs CPU)</button>
+        <button class="vs-player">Game (vs player)</button>
+      </div>
 
   <!-- New game menu end -->
 
   <!-- Game board start -->
 
-  <!-- x/o icon --> turn
+  <!-- (x/o icon)  turn -->
 
-  X (You) <!-- Your score -->
-  Ties <!-- Ties score -->
-  X (CPU) <!-- CPU score -->
+  <!-- X (You)  (Your score)
+  Ties  (Ties score)
+  X (CPU)  (CPU score)
 
   Oh no, you lost
   You won!
-  Player <!-- 1/2 --> wins!
+  Player (1/2) wins!
 
-  <!-- x/o icon --> takes the round
+  (x/o icon) takes the round
   Round tied
   Restart game?
 
   Quit
   Next round
   No, cancel
-  Yes, restart
+  Yes, restart -->
 
-  <!-- Game board end -->  
-<script src="script.js"></script>
-</body>
+  <!-- Game board end -->
+  <script src="script.js"></script>
+  </body>
+
 </html>

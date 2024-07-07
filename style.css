@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #1A2A33;
+    font-family: "outfit", sans-serif;
+}
+
+.outfit {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    top: 300px;
+    text-align: center;
+    width: 460px;
+    height: 215px;
+    background-color: #1F3641;
+    box-shadow: 0px -8px 0px 0px #10212A inset;
+    border-radius: 10px;
+}
+
+.logo {
+    position:relative;
+    bottom: 40px;
+}
+
+.switch {
+    display:flex;
+    justify-content: center;
+    position: relative;
+    left:30px;
+    border:2px solid transparent;
+    border-radius: 10px;
+    width:400px;
+    background-color: #1A2A33;
+}
+
+.mark-button {
+    width: 200px;
+    height: 70px;
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
+    cursor:pointer;
+    border:10px solid transparent;
+    border-radius: 10px;
+    padding:0px;
+}
+
+.mark-button:hover {
+    background-color: #A8BFC9;
+    color: black;
+    border-radius: 20px;
+    width:200px;
+    height:70px;
+    border:10px solid #1A2A33;
+}
+
+.mark-button:hover, .p-o:hover, .p-x:hover{
+    color:#1A2A33;
+}
+
+.mark-button.active {
+    background-color: #1A2A33;
+    color: black;
+}
+
+.p-x, .p-o {
+    width:180px;
+    height:54px;
+    margin:0px;
+    color: #A8BFC9;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+h3 {
+    color: #A8BFC9;
+    margin-top:0px;
+}
+
+.remember {
+    color:#A8BFC9;
+    opacity: 50%;
+}
+
+.new-game {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top:320px;
+    gap:20px;
+}
+
+.vs-cpu, .vs-player {
+    width:460px;
+    height:67px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.vs-cpu {
+    background-color: #F2B137;
+    box-shadow: 0px -8px 0px 0px #CC8B13 inset;
+}
+
+.vs-player {
+    background-color: #31C3BD;
+    box-shadow: 0px -8px 0px 0px #118C87 inset;
+}
