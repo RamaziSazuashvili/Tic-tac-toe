@@ -33,8 +33,8 @@
       
     </div>
     <div class="new-game">
-        <button class="vs-cpu">New Game (vs CPU)</button>
-        <button class="vs-player">Game (vs player)</button>
+        <button class="vs-cpu" onclick="">New Game (vs CPU)</button>
+        <button class="vs-player" onclick="">Game (vs player)</button>
       </div>
 
   <!-- New game menu end -->
@@ -43,10 +43,91 @@
       <div class="game-board">
         <div class="head">
           <img src="./assets/logo.svg" alt="logo"> 
-          <div class="turn"><p class="turn-x">X</p> <p class="turn-text">TURN</p></div>
-          <img src="./assets/icon-restart.svg" alt="restart" class="restart">
+          <div class="turn"><p class="turn-symbol">X</p> <p class="turn-text">TURN</p></div>
+          <button class="restart-button"><img src="./assets/icon-restart.svg" type="svg" alt="restart" class="restart"></button>
         </div>
-      </div>
+
+        <div class="card-group">
+          <button class="card" data-index="0">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+          <button class="card" data-index="1">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+          <button class="card" data-index="2">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+        </div>
+
+        <div class="card-group">
+          <button class="card" data-index="3">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon-outline" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+          <button class="card" data-index="4">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+          <button class="card" data-index="5">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+        </div>
+
+        <div class="card-group">
+          <button class="card" data-index="6">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+          <button class="card" data-index="7">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+          <button class="card" data-index="8">
+            <img src="./assets/icon-x.svg" type="svg" alt="x-icon" class="x-icon">
+            <img src="./assets/icon-o.svg" type="svg" alt="o-icon" class="o-icon">
+          </button>
+        </div>
+
+        <div class="scores">
+          <div class="x-score">
+            <p class="x-text">X (YOU)</p>
+            <p class="x-score-text">0</p>
+          </div>
+          <div class="ties-score">
+            <p class="ties-text">TIES</p>
+            <p class="ties-score-text">0</p>
+          </div>
+          <div class="o-score">
+            <p class="o-text">O (CPU)</p>
+            <p class="o-score-text">0</p>
+          </div>
+      </section>
+
+  <!-- Game board end -->
+
+  <!-- Restart confirmation modal -->
+  <div class="modal" id="restart-modal">
+    <div class="modal-content">
+      <p>Restart game?</p>
+      <button id="no-cancel">NO, CANCEL</button>
+      <button id="yes-restart">YES, RESTART</button>
+    </div>
+  </div>
+
+  <!-- Game result modal -->
+  <div class="modal" id="result-modal">
+    <div class="modal-content">
+      <p id="result-message"></p>
+      <button id="quit">QUIT</button>
+      <button id="next-round">NEXT ROUND</button>
+    </div>
+  </div>
+
+  
   <!-- (x/o icon)  turn -->
 
   <!-- X (You)  (Your score)

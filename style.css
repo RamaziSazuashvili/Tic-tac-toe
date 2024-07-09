@@ -8,6 +8,7 @@ body {
     align-items: center;
     background: #1A2A33;
     font-family: "outfit", sans-serif;
+    overflow: hidden;
 }
 
 .outfit {
@@ -140,6 +141,11 @@ h3 {
     box-shadow: 0px -8px 0px 0px #118C87 inset;
 }
 
+.game-board {
+    display: none;
+    margin-top: 90px;
+}
+
 
 .head {
     margin: 0;
@@ -147,7 +153,7 @@ h3 {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    gap:96px;
+    gap:130px;
 }
 
 
@@ -157,17 +163,19 @@ h3 {
     font-weight: 700;
     font-size: 16px;
     background-color: #1F3641;
+    box-shadow: 0px -4px 0px 0px #10212A inset;
     text-align: center;
     width:140px;
-    height:40px;
+    height:52px;
     border-radius: 10px;
     gap:20px;
     justify-content: center;
+    margin-right:18px;
 }
 
-.turn-x {
+.turn-symbol {
     margin:0px;
-    margin-top:6px;
+    margin-top:10px;
     max-width:10px;
     height:46px;
     font-weight: 900;
@@ -176,14 +184,196 @@ h3 {
 
 .turn-text {
     margin:0px;
-    margin-top:9px;
+    margin-top:13px;
     font-size: 16px;
     font-weight: 600;
 }
 
 .restart {
+    display:flex;
     background-color: #A8BFC9;
-    border-radius: 2px;
+    margin-top: 6px;
+    margin-left: 2px;
+    border-radius: 3px;
+    width:30px;
+    height:30px;
+}
+
+.restart-button {
+    display:flex;
     width:52px;
     height:52px;
+    background-color: #A8BFC9;
+    border-radius: 10px;
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+}
+
+.card-group {
+    display: flex;
+    justify-content: center;
+}
+
+.card  {
+    margin: 30px;
+    width:140px;
+    height:140px;
+    background-color: #1F3641;
+    box-shadow: 0px -8px 0px 0px #10212A inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card::before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.card:hover::before {
+    display: block;
+}
+
+.scores {
+    display:flex;
+    flex-direction: row;
+    margin-left: 30px;
+    gap:60px;
+}
+
+.x-score {
+    width:140px;
+    height:72px;
+    background-color: #31C3BD;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin:0px;
+    border-radius: 15px;
+}
+
+.x-text {
+    margin:0px;
+    margin-top:18px;
+    line-height: 1px;
+}
+
+.x-score-text {
+    margin:0px;
+    margin-top:10px;
+    font-weight: 700;
+    font-size: 24px;
+    color:#1A2A33
+}
+
+.ties-score {
+    width: 140px;
+    height: 72px;
+    background-color: #A8BFC9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    border-radius: 15px;
+}
+
+.ties-text {
+    margin: 0px;
+    margin-top: 18px;
+    line-height: 1px;
+}
+
+.ties-score-text {
+    margin: 0px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1A2A33
+}
+
+.o-score {
+    width: 140px;
+    height: 72px;
+    background-color: #F2B137;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    border-radius: 15px;
+}
+
+.o-text {
+    margin: 0px;
+    margin-top: 18px;
+    line-height: 1px;
+}
+
+.o-score-text {
+    margin: 0px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1A2A33
+}
+
+.x-icon,
+.o-icon {
+    display: none;
+}
+
+.x-icon {
+    padding-left: 30px;
+}
+
+.o-icon {
+    padding-left: 30px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1F3641;
+    color: #A8BFC9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#no-cancel {
+    background-color: #A8BFC9;
+}
+
+#yes-restart {
+    background-color: #F2B137;
+}
+
+#quit,
+#next-round {
+    background-color: #A8BFC9;
 }
